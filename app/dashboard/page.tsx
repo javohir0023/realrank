@@ -9,7 +9,6 @@ import { PlaceFilters } from '@/components/place-filters'
 import { PlaceDetailsModal } from '@/components/place-details-modal'
 import { TopPicksSection } from '@/components/top-picks-section'
 import { FridayDiscountsSection } from '@/components/friday-discounts-section'
-import { AIChatbot } from '@/components/ai-chatbot'
 import { useLanguage } from '@/lib/i18n/language-context'
 import { useTopPicks } from '@/hooks/use-top-picks'
 import { mockPlaces, type Place, type PlaceType, placeStats } from '@/lib/mock-data'
@@ -339,9 +338,6 @@ export default function DashboardPage() {
           setModalOpen(false)
         }}
       />
-
-      {/* AI Chatbot */}
-      <AIChatbot />
     </div>
   )
 }

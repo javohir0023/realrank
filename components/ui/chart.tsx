@@ -71,33 +71,28 @@ function ChartContainer({
 
 const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
   const colorConfig = Object.entries(config).filter(
-    ([, config]) => config.theme || config.color,
+    ([, itemConfig]) => itemConfig.theme || itemConfig.color,
   )
 
   if (!colorConfig.length) {
     return null
   }
 
-  return (
-    <style
-      dangerouslySetInnerHTML={{
-        __html: Object.entries(THEMES)
-          .map(
-            ([theme, prefix]) => `
-${prefix} [data-chart=${id}] {
-${colorConfig
-  .map(([key, itemConfig]) => {
-    const color =
-      itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ||
-      itemConfig.color
-    return color ? `  --color-${key}: ${color};` : null
+  // Build CSS variables as inline styles on a div instead of using style tag
+  const cssVars: Record<string, string> = {}
+  
+  colorConfig.forEach(([key, itemConfig]) => {
+    const color = itemConfig.theme?.light || itemConfig.color
+    if (color) {
+      cssVars[`--color-${key}`] = color
+    }
   })
-  .join('\n')}
-}
-`,
-          )
-          .join('\n'),
-      }}
+
+  return (
+    <div 
+      data-chart-style={id}
+      style={cssVars as React.CSSProperties}
+      className="hidden"
     />
   )
 }
