@@ -281,6 +281,8 @@ const cafesRestaurants: Omit<KhorezmPlace, 'coordinates'>[] = [
   { id: 129, name: 'Xonqa Milliy', district: 'Xonqa tumani', address: "Do'stlik MFY", landmark: 'Tuman markazi', status: 'active', type: 'cafe_restaurant', menuItems: standardMenu, priceLevel: 'medium', phone: '+998622951234' },
   // Yangiariq tumani
   { id: 130, name: 'Yangiariq Osh Markazi', district: 'Yangiariq tumani', address: 'Sherobod MFY', landmark: 'Bozor yonida', status: 'active', type: 'cafe_restaurant', menuItems: budgetMenu, priceLevel: 'low', phone: '+998623051234' },
+  // Urganch shahar - Additional
+  { id: 131, name: 'Sofra Restaurant', district: 'Urganch shahar', address: "G'afur G'ulom ko'chasi", landmark: 'Markaziy ko\'cha', status: 'active', type: 'cafe_restaurant', menuItems: standardMenu, priceLevel: 'medium', phone: '+998622246890' },
 ]
 
 // Construction material prices in Uzbekistan (January 2026)
