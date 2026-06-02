@@ -51,6 +51,7 @@ export const translations = {
     evCharging: 'EV Charging',
     constructionShop: 'Construction Shop',
     cafeRestaurant: 'Cafe / Restaurant',
+    sofa: 'Furniture',
     distance: 'Distance',
     sortBy: 'Sort By',
     nearest: 'Nearest',
@@ -97,6 +98,7 @@ export const translations = {
     ev_charging: 'EV Charging',
     construction_shop: 'Shop',
     cafe_restaurant: 'Cafe',
+    sofa: 'Furniture',
     
     // Top Picks
     bestPicks: 'Best picks for you',
@@ -220,6 +222,7 @@ export const translations = {
     evCharging: 'Зарядка EV',
     constructionShop: 'Строительный магазин',
     cafeRestaurant: 'Кафе / Ресторан',
+    sofa: 'Мебель',
     distance: 'Расстояние',
     sortBy: 'Сортировка',
     nearest: 'Ближайшие',
@@ -266,6 +269,7 @@ export const translations = {
     ev_charging: 'Зарядка',
     construction_shop: 'Магазин',
     cafe_restaurant: 'Кафе',
+    sofa: 'Мебель',
     
     // Top Picks
     bestPicks: 'Лучшие варианты для вас',
@@ -382,6 +386,7 @@ export const translations = {
     evCharging: 'EV zaryadlash',
     constructionShop: "Qurilish do'koni",
     cafeRestaurant: 'Kafe / Restoran',
+    sofa: "Mebel do'koni",
     distance: 'Masofa',
     sortBy: 'Saralash',
     nearest: 'Eng yaqin',
@@ -428,6 +433,7 @@ export const translations = {
     ev_charging: 'Zaryadlash',
     construction_shop: "Do'kon",
     cafe_restaurant: 'Kafe',
+    sofa: 'Mebel',
     
     // Top Picks
     bestPicks: 'Sizga eng yaxshi variantlar',

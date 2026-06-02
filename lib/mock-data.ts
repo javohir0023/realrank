@@ -3,7 +3,7 @@ import { khorezmPlaces, type KhorezmPlace, placeStats, type FuelPrice, type Menu
 // Re-export price types for convenience
 export type { FuelPrice, MenuItem, MaterialPrice }
 
-export type PlaceType = 'fuel_station' | 'ev_charging' | 'construction_shop' | 'cafe_restaurant'
+export type PlaceType = 'fuel_station' | 'ev_charging' | 'construction_shop' | 'cafe_restaurant' | 'sofa'
 
 export interface Review {
   id: string
@@ -85,6 +85,11 @@ const placeImages: Record<PlaceType, string[]> = {
   ev_charging: [
     'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=400&h=300&fit=crop',
     'https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=400&h=300&fit=crop',
+  ],
+  sofa: [
+    'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1592078615290-033ee584e267?w=400&h=300&fit=crop',
   ],
 }
 
@@ -226,6 +231,8 @@ export const getPlaceTypeIcon = (type: PlaceType) => {
       return 'Wrench'
     case 'cafe_restaurant':
       return 'Coffee'
+    case 'sofa':
+      return 'Armchair'
     default:
       return 'MapPin'
   }
@@ -241,6 +248,8 @@ export const getPlaceTypeColor = (type: PlaceType) => {
       return 'bg-amber-500'
     case 'cafe_restaurant':
       return 'bg-blue-500'
+    case 'sofa':
+      return 'bg-purple-500'
     default:
       return 'bg-gray-500'
   }

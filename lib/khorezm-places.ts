@@ -1,7 +1,7 @@
 // Real places data from Khorezm region, Uzbekistan
 // Includes fuel stations, cafes, restaurants, and construction shops
 
-export type KhorezmPlaceType = 'fuel_station' | 'cafe_restaurant' | 'construction_shop'
+export type KhorezmPlaceType = 'fuel_station' | 'cafe_restaurant' | 'construction_shop' | 'sofa'
 
 // Fuel types available at stations
 export type FuelType = 'metan' | 'propan' | 'benzin' | 'dizel'
@@ -337,38 +337,23 @@ const constructionShops: Omit<KhorezmPlace, 'coordinates'>[] = [
   { id: 216, name: 'Xiva Qurilish Bozori', district: 'Xiva shahri', address: 'Angarik MFY', landmark: 'Bozor yonida', status: 'active', type: 'construction_shop', materialPrices: standardMaterials, priceLevel: 'medium' },
   { id: 217, name: 'Qiyot Stroy Market', district: 'Xiva shahri', address: 'Qiyot MFY', landmark: 'Shimoliy yo\'l', status: 'active', type: 'construction_shop', materialPrices: premiumMaterials, priceLevel: 'high' },
   { id: 218, name: 'Guliston Materiallar', district: 'Xiva shahri', address: 'Guliston MFY', landmark: 'Siliqat zavod yonida', status: 'active', type: 'construction_shop', materialPrices: budgetMaterials, priceLevel: 'low' },
-  // Gurlan tumani
-  { id: 219, name: 'Gurlan Stroy Bozor', district: 'Gurlan tumani', address: "Ma'rifat MFY", landmark: 'Tuman markazi', status: 'active', type: 'construction_shop', materialPrices: standardMaterials, priceLevel: 'medium' },
-  { id: 220, name: 'Navbaxor Qurilish', district: 'Gurlan tumani', address: 'Navbaxor MFY', landmark: 'Post GAI yonida', status: 'active', type: 'construction_shop', materialPrices: budgetMaterials, priceLevel: 'low' },
-  // Qo'shko'pir tumani
-  { id: 221, name: 'Qo\'shko\'pir Qurilish Mollari', district: "Qo'shko'pir tumani", address: 'Dovud MFY', landmark: 'Qaramon', status: 'active', type: 'construction_shop', materialPrices: standardMaterials, priceLevel: 'medium' },
-  { id: 222, name: 'Polvon Stroy', district: "Qo'shko'pir tumani", address: 'Polvon MFY', landmark: 'Paxta zavod yonida', status: 'active', type: 'construction_shop', materialPrices: budgetMaterials, priceLevel: 'low' },
-  // Shovot tumani
-  { id: 223, name: 'Shovot Qurilish Markazi', district: 'Shovot tumani', address: 'Turkiston MFY', landmark: 'Shovot krug', status: 'active', type: 'construction_shop', materialPrices: standardMaterials, priceLevel: 'medium' },
-  { id: 224, name: 'Guliston Stroy', district: 'Shovot tumani', address: 'Guliston MFY', landmark: 'Tuman markazi', status: 'active', type: 'construction_shop', materialPrices: budgetMaterials, priceLevel: 'low' },
-  // Xazorasp tumani
-  { id: 225, name: 'Xazorasp Qurilish Bozori', district: 'Xazorasp tumani', address: 'SANOAT MFY', landmark: "To'rt yo'l", status: 'active', type: 'construction_shop', materialPrices: standardMaterials, priceLevel: 'medium' },
-  { id: 226, name: 'Bogdor Materiallar', district: 'Xazorasp tumani', address: 'BOGDOR MFY', landmark: '96 avtobaz yonida', status: 'active', type: 'construction_shop', materialPrices: budgetMaterials, priceLevel: 'low' },
-  // Bog'ot tumani
-  { id: 227, name: 'Bog\'ot Stroy Market', district: "Bog'ot tumani", address: 'Nurafshon MFY', landmark: 'Tuman markazi', status: 'active', type: 'construction_shop', materialPrices: standardMaterials, priceLevel: 'medium' },
-  { id: 228, name: 'Oq Tepa Qurilish', district: "Bog'ot tumani", address: 'Oq tepa MFY', landmark: 'Tumangaz yonida', status: 'active', type: 'construction_shop', materialPrices: budgetMaterials, priceLevel: 'low' },
-  // Xonqa tumani
-  { id: 229, name: 'Xonqa Qurilish Mollari', district: 'Xonqa tumani', address: "Do'stlik MFY", landmark: 'Tuman markazi', status: 'active', type: 'construction_shop', materialPrices: standardMaterials, priceLevel: 'medium' },
-  { id: 230, name: 'Sarapoyon Stroy', district: 'Xonqa tumani', address: 'Sarapoyon MFY', landmark: "Urganch yo'li", status: 'active', type: 'construction_shop', materialPrices: budgetMaterials, priceLevel: 'low' },
-  // Yangiariq tumani
-  { id: 231, name: 'Yangiariq Qurilish Bozori', district: 'Yangiariq tumani', address: 'Sherobod MFY', landmark: '1-may', status: 'active', type: 'construction_shop', materialPrices: standardMaterials, priceLevel: 'medium' },
-  { id: 232, name: 'Karmish Materiallar', district: 'Yangiariq tumani', address: 'Karmish MFY', landmark: "O'rjon", status: 'active', type: 'construction_shop', materialPrices: budgetMaterials, priceLevel: 'low' },
-  // Tuproqqal'a tumani
-  { id: 233, name: 'Tuproqqal\'a Stroy', district: "Tuproqqal'a tumani", address: 'Sarimoy MFY', landmark: 'Betonka', status: 'active', type: 'construction_shop', materialPrices: standardMaterials, priceLevel: 'medium' },
-  { id: 234, name: 'Muxabbat Qurilish', district: "Tuproqqal'a tumani", address: 'Muxabbat MFY', landmark: 'Tuman markazi', status: 'active', type: 'construction_shop', materialPrices: budgetMaterials, priceLevel: 'low' },
-  // Yangibozor tumani
-  { id: 235, name: 'Yangibozor Stroy Market', district: 'Yangibozor tumani', address: "Mang'itlar MFY", landmark: 'Bozor yonida', status: 'active', type: 'construction_shop', materialPrices: standardMaterials, priceLevel: 'medium' },
-  // Xiva tumani
-  { id: 236, name: 'Xiva Tumani Qurilish', district: 'Xiva tumani', address: 'Pano Maksim MFY', landmark: "Qo'shko'pir yo'li", status: 'active', type: 'construction_shop', materialPrices: budgetMaterials, priceLevel: 'low' },
 ]
 
-// Combine all places
-const allRawPlaces = [...fuelStations, ...cafesRestaurants, ...constructionShops]
+// ========== SOFA & FURNITURE SHOPS ==========
+const sofaFurniture: Omit<KhorezmPlace, 'coordinates'>[] = [
+  // Urganch shahar - Main furniture district
+  { id: 301, name: 'Xorazm Mebel Markazi', district: 'Urganch shahar', address: "Sanoatchilar ko'chasi", landmark: 'Mebel bozori', status: 'active', type: 'sofa', menuItems: [{ name: 'So\'fa', price: 2500000 }, { name: 'Stol', price: 850000 }, { name: 'Stul', price: 350000 }], priceLevel: 'medium', phone: '+998622346789' },
+  { id: 302, name: 'Luksuriya Mebellar', district: 'Urganch shahar', address: "Ma'shal MFY", landmark: 'Savdo markazi', status: 'active', type: 'sofa', menuItems: [{ name: 'Premium So\'fa', price: 4500000 }, { name: 'Dermatinli Stul', price: 650000 }, { name: 'Tabure', price: 250000 }], priceLevel: 'high', phone: '+998622241234' },
+  { id: 303, name: 'Amaliy Mebel Do\'koni', district: 'Urganch shahar', address: 'Mustaqillik ko\'chasi', landmark: 'Hokimiyat oldida', status: 'active', type: 'sofa', menuItems: [{ name: 'Amaliy So\'fa', price: 1800000 }, { name: 'Oshxona Stoli', price: 650000 }, { name: 'Yordamchi Stul', price: 180000 }], priceLevel: 'low', phone: '+998622245678' },
+  { id: 304, name: 'Saroy Mebellar', district: 'Urganch shahar', address: 'Yangi-Obod MFY', landmark: 'Saroy mehmonxonasi', status: 'active', type: 'sofa', menuItems: [{ name: 'Turk So\'fa', price: 3200000 }, { name: 'Qo\'ri Stul', price: 450000 }, { name: 'Tez-tez ishlatiladigan Tabure', price: 320000 }], priceLevel: 'medium', phone: '+998622243456' },
+  { id: 305, name: 'Shaharlik Mebel Studio', district: 'Urganch shahar', address: "Sanoatchilar ko'chasi", landmark: 'Xiva krug', status: 'active', type: 'sofa', menuItems: [{ name: 'Modular So\'fa', price: 5200000 }, { name: 'Osboe Chihil', price: 890000 }, { name: 'Kafe Stuli', price: 280000 }], priceLevel: 'high', phone: '+998622248901' },
+  // Xiva shahri
+  { id: 306, name: 'Xiva Mebel Sarayi', district: 'Xiva shahri', address: 'Angarik MFY', landmark: 'Mehmonxona yonida', status: 'active', type: 'sofa', menuItems: [{ name: 'Klassik So\'fa', price: 3800000 }, { name: 'Antik Stul', price: 520000 }, { name: 'Dekorativ Tabure', price: 380000 }], priceLevel: 'high', phone: '+998622753789' },
+  // Urganch tumani
+  { id: 307, name: 'Qishloq Mebellar', district: 'Urganch tumani', address: "Oyoq-bog' MFY", landmark: "Xiva yo'li", status: 'active', type: 'sofa', menuItems: [{ name: 'Sodda So\'fa', price: 1500000 }, { name: 'Oshxona Stuli', price: 250000 }, { name: 'Balkon Kreslo', price: 220000 }], priceLevel: 'low', phone: '+998622251234' },
+]
+
+const allRawPlaces = [...fuelStations, ...cafesRestaurants, ...constructionShops, ...sofaFurniture]
 
 // Convert raw data to KhorezmPlace format with coordinates
 export const khorezmPlaces: KhorezmPlace[] = allRawPlaces.map((place) => {
@@ -420,5 +405,6 @@ export const placeStats = {
   fuelStations: fuelStations.length,
   cafesRestaurants: cafesRestaurants.length,
   constructionShops: constructionShops.length,
+  sofaFurniture: sofaFurniture.length,
   districts: districts.length,
 }
