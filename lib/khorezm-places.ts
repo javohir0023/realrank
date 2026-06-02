@@ -222,6 +222,69 @@ const standardMenu: MenuItem[] = [
   { name: 'Choy', price: 8000 },
 ]
 
+const sofraMenu: MenuItem[] = [
+  { name: 'Aziya salati', price: 40000 },
+  { name: 'Grecheskiy salat', price: 39000 },
+  { name: 'Cesar salat', price: 43000 },
+  { name: 'Oteche kapriz', price: 45000 },
+  { name: 'Achikchuchiuk', price: 22000 },
+  { name: 'Xustandiyi baklazhan', price: 38000 },
+  { name: 'Pirikantiy', price: 60000 },
+  { name: 'Mexiko salat', price: 42000 },
+  { name: 'S ananasm', price: 35000 },
+  { name: 'Bon file salat', price: 55000 },
+  { name: 'Choy s limonom', price: 30000 },
+  { name: 'Choy s myatoy', price: 15000 },
+  { name: 'Americano', price: 20000 },
+  { name: 'Espresso', price: 20000 },
+  { name: 'Cappuchino', price: 27000 },
+  { name: 'Limonad Malina-Marakuy 1l', price: 110000 },
+  { name: 'Limonad Mango-Marakuy 1l', price: 110000 },
+  { name: 'Kartoffel fri', price: 20000 },
+  { name: 'Kartoffel Ayidaxo', price: 22000 },
+  { name: 'Chesnochniy sous', price: 7000 },
+  { name: 'Shashlichniy sous', price: 7000 },
+  { name: 'Ovoshchi na grile', price: 30000 },
+  { name: 'Steyk Sofra', price: 390000 },
+  { name: 'Steyk telyatina', price: 400000 },
+  { name: 'Steyk s maslom', price: 400000 },
+  { name: 'Steyk s surnoy sousom', price: 400000 },
+  { name: 'Serbskiy kotlet', price: 130000 },
+  { name: 'Kofta gril', price: 77000 },
+  { name: 'Ryba na manganale 1kg', price: 150000 },
+  { name: 'Zharenye ryby 1kg', price: 130000 },
+  { name: 'Ryba s sousom 1kg', price: 140000 },
+  { name: 'Koreyaka 1sht', price: 45000 },
+  { name: 'Shashlik iz govyadiny 1sht', price: 28000 },
+  { name: 'Shashlik iz baraniny 1sht', price: 28000 },
+  { name: 'Pitsa Kombo', price: 95000 },
+  { name: 'Pitsa Kaprichcho', price: 90000 },
+  { name: 'Pitsa Duet', price: 90000 },
+  { name: 'Pitsa Pepperoni', price: 85000 },
+  { name: 'Pitsa Margarita', price: 65000 },
+  { name: 'Chizburger', price: 42000 },
+  { name: 'Double chizburger', price: 47000 },
+  { name: 'Mini burger 3sht', price: 90000 },
+  { name: 'Donar', price: 45000 },
+  { name: 'Lavash', price: 41000 },
+  { name: 'Chuzmma lagmon', price: 70000 },
+  { name: 'Kook barak', price: 45000 },
+  { name: 'Sofra Samsa', price: 15000 },
+  { name: 'Chizkeyk special', price: 45000 },
+  { name: 'Chizkeyk new york', price: 45000 },
+  { name: 'San-sebastian special', price: 50000 },
+  { name: 'San-sebastian', price: 40000 },
+  { name: 'Apricot dessert', price: 30000 },
+  { name: 'Miranda dessert', price: 35000 },
+  { name: 'Sharik s morozhennym', price: 35000 },
+  { name: 'Fruktoviy salad', price: 35000 },
+  { name: 'Smuzi bananoviy', price: 45000 },
+  { name: 'Smuzi klubnichniy', price: 45000 },
+  { name: 'Smuzi Kivi-Marakuy', price: 45000 },
+  { name: 'Pistachio Dream', price: 65000 },
+  { name: 'Fruktovoe assrti', price: 130000 },
+]
+
 const premiumMenu: MenuItem[] = [
   { name: 'Osh (plov)', price: 55000 },
   { name: 'Somsa', price: 15000 },
@@ -281,6 +344,8 @@ const cafesRestaurants: Omit<KhorezmPlace, 'coordinates'>[] = [
   { id: 129, name: 'Xonqa Milliy', district: 'Xonqa tumani', address: "Do'stlik MFY", landmark: 'Tuman markazi', status: 'active', type: 'cafe_restaurant', menuItems: standardMenu, priceLevel: 'medium', phone: '+998622951234' },
   // Yangiariq tumani
   { id: 130, name: 'Yangiariq Osh Markazi', district: 'Yangiariq tumani', address: 'Sherobod MFY', landmark: 'Bozor yonida', status: 'active', type: 'cafe_restaurant', menuItems: budgetMenu, priceLevel: 'low', phone: '+998623051234' },
+  // Urganch shahar - Additional
+  { id: 131, name: 'Sofra Restaurant', district: 'Urganch shahar', address: "G'afur G'ulom ko'chasi", landmark: 'Markaziy ko\'cha', status: 'active', type: 'cafe_restaurant', menuItems: sofraMenu, priceLevel: 'high', phone: '+998971408888', coordinates: { lat: 41.378057, lng: 60.374457 } },
 ]
 
 // Construction material prices in Uzbekistan (January 2026)
@@ -378,7 +443,7 @@ export const khorezmPlaces: KhorezmPlace[] = allRawPlaces.map((place) => {
   
   return {
     ...place,
-    coordinates: getPlaceCoordinates(place.district, indexInDistrict, typeOffset),
+    coordinates: (place as any).coordinates || getPlaceCoordinates(place.district, indexInDistrict, typeOffset),
   }
 })
 

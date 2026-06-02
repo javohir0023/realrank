@@ -60,7 +60,7 @@ export function Navbar({ onMenuClick, searchQuery, onSearchChange }: NavbarProps
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary">
             <MapPin className="h-4 w-4 text-primary-foreground" />
           </div>
-          <span className="text-lg font-bold text-card-foreground hidden sm:inline">RealRate</span>
+          <span className="text-lg font-bold text-card-foreground hidden sm:inline">realrank</span>
         </div>
       </div>
 

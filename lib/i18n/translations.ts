@@ -134,12 +134,12 @@ export const translations = {
     uzs: 'UZS',
     
     // AI Chatbot
-    aiAssistant: 'RealRate AI',
+    aiAssistant: 'realrank AI',
     askAboutKhorezm: 'Ask about places in Khorezm...',
     typeMessage: 'Type your message...',
     send: 'Send',
     thinking: 'Thinking...',
-    chatbotWelcome: "Hello! I'm RealRate AI assistant for Khorezm region. Ask me about restaurants, cafes, fuel stations, or construction shops!",
+    chatbotWelcome: "Hello! I'm realrank AI assistant for Khorezm region. Ask me about restaurants, cafes, fuel stations, or construction shops!",
     
     // Time-Weighted Rating
     timeWeightedRating: 'Time-Weighted Rating',
@@ -296,12 +296,12 @@ export const translations = {
     uzs: 'сум',
     
     // AI Chatbot
-    aiAssistant: 'RealRate AI',
+    aiAssistant: 'realrank AI',
     askAboutKhorezm: 'Спросите о местах в Хорезме...',
     typeMessage: 'Введите сообщение...',
     send: 'Отправить',
     thinking: 'Думаю...',
-    chatbotWelcome: 'Привет! Я AI-помощник RealRate для Хорезма. Спрашивайте о ресторанах, кафе, заправках или строительных магазинах!',
+    chatbotWelcome: 'Привет! Я AI-помощник realrank для Хорезма. Спрашивайте о ресторанах, кафе, заправках или строительных магазинах!',
     
     // Time-Weighted Rating
     timeWeightedRating: 'Рейтинг по времени',
@@ -458,12 +458,12 @@ export const translations = {
     uzs: "so'm",
     
     // AI Chatbot
-    aiAssistant: 'RealRate AI',
+    aiAssistant: 'realrank AI',
     askAboutKhorezm: "Xorazmdagi joylar haqida so'rang...",
     typeMessage: 'Xabar yozing...',
     send: 'Yuborish',
     thinking: "O'ylayapman...",
-    chatbotWelcome: "Salom! Men Xorazm uchun RealRate AI yordamchiman. Restoran, kafe, yoqilg'i stansiyalari yoki qurilish do'konlari haqida so'rang!",
+    chatbotWelcome: "Salom! Men Xorazm uchun realrank AI yordamchiman. Restoran, kafe, yoqilg'i stansiyalari yoki qurilish do'konlari haqida so'rang!",
     
     // Time-Weighted Rating
     timeWeightedRating: "Vaqt bo'yicha reyting",
