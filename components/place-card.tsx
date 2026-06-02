@@ -8,7 +8,6 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { RatingStars } from '@/components/rating-stars'
 import { DistanceBadge } from '@/components/distance-badge'
-import { useLanguage } from '@/lib/i18n/language-context'
 import { type Place, type PlaceType, getPlaceTypeColor } from '@/lib/mock-data'
 import { MapPin, Fuel, Zap, Wrench, Coffee, Navigation, Map, DollarSign } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -29,7 +28,6 @@ const typeIcons: Record<PlaceType, typeof Fuel> = {
 }
 
 export function PlaceCard({ place, onClick, onViewOnMap, onGetDirections, isSelected }: PlaceCardProps) {
-  const { t } = useLanguage()
   const Icon = typeIcons[place.type]
 
   const handleViewOnMap = (e: React.MouseEvent) => {
@@ -72,7 +70,7 @@ export function PlaceCard({ place, onClick, onViewOnMap, onGetDirections, isSele
         <div className="absolute top-2 right-2">
           {place.isOpen !== null && (
             <Badge variant={place.isOpen ? 'default' : 'secondary'} className={place.isOpen ? 'bg-emerald-500 hover:bg-emerald-600 text-white' : ''}>
-              {place.isOpen ? t('open') : t('closed')}
+              {place.isOpen ? 'Open' : 'Closed'}
             </Badge>
           )}
         </div>
@@ -90,9 +88,9 @@ export function PlaceCard({ place, onClick, onViewOnMap, onGetDirections, isSele
                 place.priceLevel === 'high' && "bg-rose-500/90 text-white"
               )}
             >
-              {place.priceLevel === 'low' && t('priceLow')}
-              {place.priceLevel === 'medium' && t('priceMedium')}
-              {place.priceLevel === 'high' && t('priceHigh')}
+              {place.priceLevel === 'low' && 'Budget'}
+              {place.priceLevel === 'medium' && 'Moderate'}
+              {place.priceLevel === 'high' && 'Premium'}
             </Badge>
           </div>
         )}
@@ -118,7 +116,7 @@ export function PlaceCard({ place, onClick, onViewOnMap, onGetDirections, isSele
             onClick={handleViewOnMap}
           >
             <Map className="h-3.5 w-3.5" />
-            {t('viewOnMap')}
+            Map
           </Button>
           <Button
             variant="default"
@@ -127,7 +125,7 @@ export function PlaceCard({ place, onClick, onViewOnMap, onGetDirections, isSele
             onClick={handleGetDirections}
           >
             <Navigation className="h-3.5 w-3.5" />
-            {t('getDirections')}
+            Directions
           </Button>
         </div>
       </CardContent>

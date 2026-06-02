@@ -2,7 +2,6 @@
 
 import { cn } from '@/lib/utils'
 import { Navigation } from 'lucide-react'
-import { useLanguage } from '@/lib/i18n/language-context'
 
 interface DistanceBadgeProps {
   distance: number
@@ -17,8 +16,6 @@ export function DistanceBadge({
   showIcon = true,
   size = 'md' 
 }: DistanceBadgeProps) {
-  const { t } = useLanguage()
-
   const sizeClasses = {
     sm: 'text-xs px-1.5 py-0.5 gap-0.5',
     md: 'text-sm px-2 py-1 gap-1',
@@ -31,10 +28,10 @@ export function DistanceBadge({
     lg: 'h-4 w-4',
   }
 
-  // Format distance nicely
+  // Format distance nicely - use static 'km' string
   const formattedDistance = distance < 1 
     ? `${(distance * 1000).toFixed(0)}m` 
-    : `${distance.toFixed(1)} ${t('km')}`
+    : `${distance.toFixed(1)} km`
 
   return (
     <div
