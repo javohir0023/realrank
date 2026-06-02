@@ -282,7 +282,7 @@ const cafesRestaurants: Omit<KhorezmPlace, 'coordinates'>[] = [
   // Yangiariq tumani
   { id: 130, name: 'Yangiariq Osh Markazi', district: 'Yangiariq tumani', address: 'Sherobod MFY', landmark: 'Bozor yonida', status: 'active', type: 'cafe_restaurant', menuItems: budgetMenu, priceLevel: 'low', phone: '+998623051234' },
   // Urganch shahar - Additional
-  { id: 131, name: 'Sofra Restaurant', district: 'Urganch shahar', address: "G'afur G'ulom ko'chasi", landmark: 'Markaziy ko\'cha', status: 'active', type: 'cafe_restaurant', menuItems: standardMenu, priceLevel: 'medium', phone: '+998622246890' },
+  { id: 131, name: 'Sofra Restaurant', district: 'Urganch shahar', address: "G'afur G'ulom ko'chasi", landmark: 'Markaziy ko\'cha', status: 'active', type: 'cafe_restaurant', menuItems: standardMenu, priceLevel: 'medium', phone: '+998622246890', coordinates: { lat: 41.378057, lng: 60.374457 } },
 ]
 
 // Construction material prices in Uzbekistan (January 2026)
@@ -380,7 +380,7 @@ export const khorezmPlaces: KhorezmPlace[] = allRawPlaces.map((place) => {
   
   return {
     ...place,
-    coordinates: getPlaceCoordinates(place.district, indexInDistrict, typeOffset),
+    coordinates: (place as any).coordinates || getPlaceCoordinates(place.district, indexInDistrict, typeOffset),
   }
 })
 
