@@ -8,7 +8,7 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { useLanguage } from '@/lib/i18n/language-context'
 import { type PlaceType } from '@/lib/mock-data'
-import { Fuel, Zap, Wrench, Coffee, Armchair, X } from 'lucide-react'
+import { Fuel, Zap, Wrench, Coffee, X } from 'lucide-react'
 
 interface FilterSidebarProps {
   selectedTypes: PlaceType[]
@@ -21,12 +21,11 @@ interface FilterSidebarProps {
   onClose: () => void
 }
 
-const serviceTypes: { type: PlaceType; icon: React.ReactNode; labelKey: 'fuelStation' | 'evCharging' | 'constructionShop' | 'cafeRestaurant' | 'sofa' }[] = [
+const serviceTypes: { type: PlaceType; icon: React.ReactNode; labelKey: 'fuelStation' | 'evCharging' | 'constructionShop' | 'cafeRestaurant' }[] = [
   { type: 'fuel_station', icon: <Fuel className="h-4 w-4" />, labelKey: 'fuelStation' },
   { type: 'ev_charging', icon: <Zap className="h-4 w-4" />, labelKey: 'evCharging' },
   { type: 'construction_shop', icon: <Wrench className="h-4 w-4" />, labelKey: 'constructionShop' },
   { type: 'cafe_restaurant', icon: <Coffee className="h-4 w-4" />, labelKey: 'cafeRestaurant' },
-  { type: 'sofa', icon: <Armchair className="h-4 w-4" />, labelKey: 'sofa' },
 ]
 
 export function FilterSidebar({
