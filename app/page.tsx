@@ -14,7 +14,7 @@ export default function AuthPage() {
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary">
             <MapPin className="h-5 w-5 text-primary-foreground" />
           </div>
-          <span className="text-xl font-bold text-foreground">RealRate</span>
+          <span className="text-xl font-bold text-foreground">realrank</span>
         </div>
         <div className="flex items-center gap-2">
           <LanguageSwitcher />
@@ -42,7 +42,7 @@ export default function AuthPage() {
 
       {/* Footer */}
       <footer className="p-4 text-center text-sm text-muted-foreground">
-        <p>2026 RealRate. All rights reserved.</p>
+        <p>2026 realrank. All rights reserved.</p>
       </footer>
     </div>
   )

@@ -10,7 +10,7 @@ import './globals.css'
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
-  title: 'RealRate - Rate & Review Places',
+  title: 'realrank - Rate & Review Places',
   description: 'Find and review fuel stations, EV charging, cafes, restaurants and more',
   generator: 'v0.app',
   icons: {
